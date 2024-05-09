@@ -24,11 +24,11 @@ SOURCES_LIST = [IMAGE, VIDEO]
 DEFAULT_IMAGE = 'gun1.png'
 DETECTED_IMAGE = 'detected_image.jpg'
 
-# Videos config
-VIDEO_1_PATH =  'demo.mp4'
-VIDEOS_DICT = {
-    'video_1': VIDEO_1_PATH
-}
+# # Videos config
+# VIDEO_1_PATH =  'demo.mp4'
+# VIDEOS_DICT = {
+#     'video_1': VIDEO_1_PATH
+# }
 
 # ML Model config
 DETECTION_MODEL = 'best.pt'
