@@ -1,10 +1,10 @@
 from pathlib import Path
 import sys
 
-# Get the absolute path of the current file
+# the absolute path of the current file
 file_path = Path(__file__).resolve()
 
-# Get the parent directory of the current file
+# the parent directory of the current file
 root_path = file_path.parent
 
 # Add the root path to the sys.path list if it is not already there
@@ -17,7 +17,6 @@ ROOT = root_path.relative_to(Path.cwd())
 # Sources
 IMAGE = 'Image'
 VIDEO = 'Video'
-# YOUTUBE = 'YouTube'
 SOURCES_LIST = [IMAGE, VIDEO]
 
 # Images config
