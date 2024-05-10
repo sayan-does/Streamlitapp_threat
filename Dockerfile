@@ -1,21 +1,19 @@
-FROM nvidia/cuda:11.3.1-base-ubuntu20.04
+# Use the official Streamlit image as the base image
+FROM streamlit/streamlit:latest
 
-# Update package repositories
-RUN apt-get update
+# Install system-level dependencies
+RUN apt-get update && \
+    apt-get install -y libgl1-mesa-dev
 
-# Install required system packages
-RUN apt-get install -y \
-    libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Set the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the entire app directory
+# Copy the requirements.txt file and install Python dependencies
+COPY requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt
+
+# Copy the contents of the app directory into the container
 COPY . .
 
-# Set the command to run the Streamlit app
-CMD ["streamlit", "run", "app.py"]
+# Set the default command to run when the container starts
+CMD ["streamlit", "run", "your_app_file.py"]
