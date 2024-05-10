@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Set the default command to run when the container starts
-CMD ["streamlit", "run", "your_app_file.py"]
+CMD ["streamlit", "run", "main.py"]
