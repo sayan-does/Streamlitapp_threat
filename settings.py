@@ -30,4 +30,4 @@ DETECTED_IMAGE = 'detected_image.jpg'
 # }
 
 # ML Model config
-DETECTION_MODEL = 'best.pt'
+DETECTION_MODEL = 'BestFinal.pt'
