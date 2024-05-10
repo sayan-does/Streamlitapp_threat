@@ -1,0 +1,12 @@
+freeglut3-dev
+libgtk2.0-dev
+libgl1-mesa-glx
+streamlit
+opencv-python
+numpy
+torch
+torchvision
+Pillow
+matplotlib
+ultralytics
+opencv-python-headless
