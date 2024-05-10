@@ -3,4 +3,3 @@ opencv_python==4.9.0.80
 Pillow==9.5.0
 streamlit==1.28.1
 ultralytics==8.2.10
-libgl1
