@@ -7,3 +7,4 @@ Pillow
 matplotlib
 ultralytics
 opencv-python-headless
+libgl1-mesa-glx
