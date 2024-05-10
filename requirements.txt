@@ -6,3 +6,5 @@ torchvision
 Pillow
 matplotlib
 ultralytics
+libgl1
+opencv-python-headless
