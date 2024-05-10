@@ -1,5 +1,10 @@
-# Use the base image with required OpenGL libraries
-FROM python:3.9-bullseye
+# Use a base image with required OpenGL libraries
+FROM nvidia/cuda:11.3.1-base-ubuntu20.04
+
+# Install required system packages
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
 WORKDIR /app
