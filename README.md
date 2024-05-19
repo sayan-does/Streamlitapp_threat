@@ -124,3 +124,6 @@ To run the Streamlit app, use the following command:
 
 ```bash
 streamlit run main.py
+```
+![screenshot1](screenshot1.png)
+![screenshot2](screenshot2.png)
