@@ -1,6 +1,6 @@
 # Threat Detection Using YOLOv8
 
-![Project Logo](path/to/logo.png)
+![Project Logo](projectbanner.png)
 
 ## Table of Contents
 
