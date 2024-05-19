@@ -33,7 +33,15 @@ YOLO (You Only Look Once) is a state-of-the-art, real-time object detection syst
 - **Anchor-Free Design**: Reduces the complexity of anchor-based predictions.
 - **Optimized for Speed and Accuracy**: Balances the trade-off between inference speed and detection accuracy.
 
-![YOLO Architecture](path/to/yolo_architecture.png)
+The architecture works as follows:
+
+1. **Resizing**: The input image is resized to 448x448 before going through the convolutional network.
+2. **Convolutions**: A 1x1 convolution is first applied to reduce the number of channels, which is then followed by a 3x3 convolution to generate a cuboidal output.
+3. **Activation Functions**: The activation function under the hood is ReLU, except for the final layer, which uses a linear activation function.
+4. **Regularization**: Additional techniques, such as batch normalization and dropout, are used to regularize the model and prevent it from overfitting.
+
+![YOLO general Architecture](yolo_architecture.jpg)
+![YOLOv8 in comparison with previous models with faster convergence](convergence.jpg)
 
 ## Usage
 
@@ -68,7 +76,20 @@ To set up and run the threat detection model on images or videos, follow these s
 
 ### Key Parameters
 
-- **Confidence Threshold (`confidence`)**: This parameter controls the minimum confidence score for a detection to be considered valid. Increasing this value will reduce the number of false positives but may also reduce the number of true positives.
+- **epochs**: (default=100) This parameter defines the number of complete passes through the training dataset. Increasing epochs can improve model accuracy but also increases training time.
+- **imgsz**: (default=640) Image size for training and inference. Larger sizes can improve accuracy but require more memory and computation.
+- **plots**: (default=True) Enables plotting of training results. Helpful for visualizing training progress.
+- **patience**: (default=10) Number of epochs to wait for improvement before stopping training early. Helps prevent overfitting.
+- **seed**: (default=42) Random seed for reproducibility of results.
+- **lr0**: (default=0.001) Initial learning rate. Controls how much to change the model in response to the estimated error each time the model weights are updated.
+- **dropout**: (default=0.5) Fraction of the input units to drop during training. Helps prevent overfitting.
+- **val**: (default=True) Enables validation during training to monitor model performance on unseen data.
+- **label_smoothing**: (default=0.2) Technique to prevent the model from becoming too confident about its predictions, leading to better generalization.
+- **verbose**: (default=True) Controls the verbosity of the training process. Set to `True` for detailed logs.
+- **cos_lr**: (default=True) Enables cosine learning rate scheduling for smoother training.
+- **single_cls**: (default=False) Treats the dataset as a single-class problem.
+- **batch**: (default=32) Batch size for training. Larger batches make the training more stable but require more memory.
+- **freeze**: (default=7) Number of layers to freeze during training. Freezing early layers can help speed up training and reduce overfitting.
 
 ### Tuning Tips
 
@@ -79,12 +100,13 @@ To set up and run the threat detection model on images or videos, follow these s
 
 ### Detection Metrics
 
-- **Precision**: XX.XX%
-- **Recall**: XX.XX%
-- **F1 Score**: XX.XX%
-- **Inference Time**: XX ms/frame
+- **Precision**: 0.873
+- **Recall**: 0.75
+- **F1 Score**: 0.805
+- **Inference Time**: 4.9 ms/frame
 
-![Detection Results](path/to/detection_results.png)
+![Detection Results](metrics_threat.jpg)
+![Detection Results](conf_mat_threat.jpg)
 
 ## Streamlit App
 
