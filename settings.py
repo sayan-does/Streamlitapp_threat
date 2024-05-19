@@ -20,7 +20,7 @@ VIDEO = 'Video'
 SOURCES_LIST = [IMAGE, VIDEO]
 
 # Images config
-DEFAULT_IMAGE = 'gun1.png'
+DEFAULT_IMAGE = 'gun1.jpg'
 DETECTED_IMAGE = 'detected_image.jpg'
 
 # # Videos config
