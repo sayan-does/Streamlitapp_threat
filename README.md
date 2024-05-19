@@ -15,7 +15,7 @@
 
 This project focuses on detecting threats such as guns and sharp weapons (e.g., knives) in real-time using the YOLOv8 object detection model. By analyzing video feeds or images, the system can promptly identify and alert authorities or security personnel to potential security risks. This technology can be applied in public spaces, airports, and other security-sensitive environments to enhance safety and security measures.
 
-![Sample Detection](path/to/sample_detection.png)
+![Sample Detection](detected_image.png)
 
 ## YOLO Architecture
 
