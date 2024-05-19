@@ -40,7 +40,9 @@ The architecture works as follows:
 3. **Activation Functions**: The activation function under the hood is ReLU, except for the final layer, which uses a linear activation function.
 4. **Regularization**: Additional techniques, such as batch normalization and dropout, are used to regularize the model and prevent it from overfitting.
 
+#### generalised YOLO first genenaration architecture
 ![YOLO general Architecture](yolo_architecture.jpg)
+#### YOLOv8 in comparison with previous models with faster convergence
 ![YOLOv8 in comparison with previous models with faster convergence](convergence.jpg)
 
 ## Usage
@@ -124,3 +126,6 @@ To run the Streamlit app, use the following command:
 
 ```bash
 streamlit run main.py
+```
+![screenshot1](screenshot1.png)
+![screenshot2](screenshot2.png)
