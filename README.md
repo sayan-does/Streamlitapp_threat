@@ -42,7 +42,7 @@ The architecture works as follows:
 
 #### generalised YOLO first genenaration architecture
 ![YOLO general Architecture](yolo_architecture.jpg)
-YOLOv8 in comparison with previous models with faster convergenc
+#### YOLOv8 in comparison with previous models with faster convergence
 ![YOLOv8 in comparison with previous models with faster convergence](convergence.jpg)
 
 ## Usage
